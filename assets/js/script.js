@@ -16,8 +16,6 @@ function createTimeBlock(theTime) {
   let timeBlockSaveCol = $("<div class='col-1 save-btn d-flex'>");
   let timeBlockSave = $("<i class='fas fa-save m-auto fa-lg save-button'></i>");
 
-  // Add classes based on current hour
-
   let militaryTime = parseInt(moment().format("HH"));
   theTime = parseInt(theTime);
 
@@ -26,7 +24,6 @@ function createTimeBlock(theTime) {
   } else if (theTime > militaryTime) {
     timeBlockTextarea.addClass("future");
   } else {
-    // Not relevant as we already defaulted the class to past
     timeBlockTextarea.addClass("past");
   }
 
